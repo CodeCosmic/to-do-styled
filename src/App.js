@@ -1,12 +1,12 @@
 import './App.css';
-import ToDoForm from './components/ToDoForm.jsx';
-                                                                                                                                                                                                                                                                                                                        
+import ToDoComp from './components/ToDoComp';
+
 function App() {
-  return (
-    <div className="App">
-        <ToDoForm />
-    </div>
-  );
+    return (
+        <div className="App">
+            <ToDoComp />
+        </div>
+    );
 }
 
 export default App;

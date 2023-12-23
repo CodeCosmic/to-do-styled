@@ -1,34 +1,32 @@
-const ToDoForm = () => {
+import React, { useState } from "react"
 
-    //date
-    //datetime-local
-    //email
-    //file
-    //hidden
-    //image
-    //month
-    //number
-    //password
-    //radio
-    //range
-    //reset
-    //search
-    //submit
-    //tel
-    //text
-    //time
-    //url
-    //week
-    
+const ToDoForm = ({ addTask }) => {
+
+    const [taskName, setTaskName] = useState("")
+
+    const handleChange = (e) => {
+        setTaskName(e.target.value)
+    }
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        addTask(taskName)
+        setTaskName("")
+    }
+
     return (
-        <div>
-            <form> 
-                <h2>Add new task here</h2>
-                <input 
-                    placeholder="New Task" 
+        <div className="ToDoForm">
+            <form onSubmit={handleSubmit}>
+                <h2>To-Do List</h2>
+                <input
+                    placeholder="Add a task"
                     type="text"
+                    onChange={handleChange}
+                    value={taskName}
                 />
-                <button type="submit">Add</button>
+                <button
+                    type="submit"
+                >Add</button>
             </form>
         </div>
     )
