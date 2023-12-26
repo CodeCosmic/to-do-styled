@@ -1,6 +1,6 @@
 import React from "react"
 
-const ToDoList = ({ task }) => {
+const ToDoList = ({ task, toggleTaskCompleted }) => {
 
     return (
         <li className="ToDoList">
@@ -8,6 +8,7 @@ const ToDoList = ({ task }) => {
                 id={task.id}
                 type="checkbox"
                 defaultChecked={task.completed}
+                onChange={() => toggleTaskCompleted(task.id)}
             />
             <label>{task.name}</label>
         </li>

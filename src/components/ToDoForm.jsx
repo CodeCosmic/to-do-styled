@@ -26,7 +26,9 @@ const ToDoForm = ({ addTask }) => {
                 />
                 <button
                     type="submit"
-                >Add</button>
+                >
+                    Add
+                </button>
             </form>
         </div>
     )
