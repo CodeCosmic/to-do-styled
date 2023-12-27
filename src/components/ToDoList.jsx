@@ -10,7 +10,7 @@ const ToDoList = ({ task, toggleTaskCompleted }) => {
                 defaultChecked={task.completed}
                 onChange={() => toggleTaskCompleted(task.id)}
             />
-            <label>{task.name}</label>
+            <label>{`${task.importance} - ${task.name}`}</label>
         </li>
     )
 }

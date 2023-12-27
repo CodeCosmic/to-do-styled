@@ -7,13 +7,12 @@ import Buttons from "./Buttons"
 const ToDoComp = () => {
 
     const [tasks, setTasks] = useState([
-        { id: "todo-0", name: "Test", completed: true },
     ])
 
-    const addTask = (name) => {
-        if(name !== ""){
-        const newTask = { id: `todo-${nanoid()}`, name, completed: false }
-        setTasks([...tasks, newTask])
+    const addTask = (name, importance) => {
+        if (name !== "") {
+            const newTask = { id: `todo-${nanoid()}`, name, completed: false, importance }
+            setTasks([...tasks, newTask])
         }
     }
 
@@ -32,13 +31,15 @@ const ToDoComp = () => {
         setTasks(remainingTasks)
     }
 
-    const taskList = tasks.map((task) => {
-        return <ToDoList
-            task={task}
-            toggleTaskCompleted={toggleTaskCompleted}
-            key={task.id}
-        />
-    })
+    const taskList = tasks
+        .sort((a, b) => b.importance - a.importance)
+        .map((task) => {
+            return <ToDoList
+                task={task}
+                toggleTaskCompleted={toggleTaskCompleted}
+                key={task.id}
+            />
+        })
 
     return (
         <div className="ToDoComp">
