@@ -7,3 +7,5 @@ Features
 5. Dropdown that lets user decide importance of task 
    and sorts list based on importance. 10 is most
    important and 1 is least important.
+6. Ability to edit task name and task importance
+
