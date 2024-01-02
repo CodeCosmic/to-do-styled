@@ -25,6 +25,7 @@ const ToDoForm = ({ addTask }) => {
             <form onSubmit={handleSubmit}>
                 <h2>To-Do List</h2>
                 <input
+                    className="addTask"
                     placeholder="Add a task"
                     type="text"
                     onChange={handleChange}
@@ -32,6 +33,7 @@ const ToDoForm = ({ addTask }) => {
                 />
                 <select
                     onChange={handleImportance}
+                    className="impSelect"
                 >
                     <option>1</option>
                     <option>2</option>
@@ -46,6 +48,7 @@ const ToDoForm = ({ addTask }) => {
                 </select>
                 <button
                     type="submit"
+                    className="addBtn"
                 >
                     Add
                 </button>

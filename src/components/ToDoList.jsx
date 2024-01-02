@@ -25,6 +25,7 @@ const ToDoList = ({ task, toggleTaskCompleted }) => {
             <label>{`${importance} - ${name}`}</label>
             <button
                 onClick={() => { setIsEditing(true); console.log(`${isEditing} from ${task.name}`) }}
+                className="editBtn"
             >
                 Edit
             </button>
@@ -40,9 +41,11 @@ const ToDoList = ({ task, toggleTaskCompleted }) => {
                     placeholder={name}
                     defaultChecked={task.completed}
                     onChange={handleNameChange}
+                    className="addTask"
                 />
                 <select
                     onClick={handleImportance}
+                    className="impSelect"
                 >
                     <option>1</option>
                     <option>2</option>
@@ -58,6 +61,7 @@ const ToDoList = ({ task, toggleTaskCompleted }) => {
                 <button
                     onClick={() => setIsEditing(false)}
                     type="submit"
+                    className="doneBtn"
                 >
                     Done
                 </button>
@@ -66,7 +70,7 @@ const ToDoList = ({ task, toggleTaskCompleted }) => {
     )
 
     return (
-        <li className="ToDoList">
+        <li className="toDoTask">
             {isEditing ? editTemplate : viewTemplate}
         </li>
     )

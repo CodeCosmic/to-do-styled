@@ -1,4 +1,3 @@
-import './App.css';
 import ToDoComp from './components/ToDoComp';
 
 function App() {

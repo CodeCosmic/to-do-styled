@@ -1,0 +1,33 @@
+/* 
+# 000000
+#200B0D
+#3F1619
+# 602025
+#802A30
+#A1333C 
+*/
+
+html {
+    font: 62.5% / 1.15 sans-serif;
+    background: #200B0D;
+}
+
+
+.ToDoComp {
+    background: #A1333C;
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.addTask, .impSelect, .addBtn, .delBtn, .doneBtn, .editBtn {
+    background-color: #802A30;
+    border: 1px solid #000;
+    margin: 1px;
+}
+
+.toDoTask{
+    background-color: #602025;
+}
+
+

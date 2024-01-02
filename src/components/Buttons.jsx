@@ -1,7 +1,12 @@
 const Buttons = ({ deleteTasks }) => {
 
     return (
-        <button onClick={deleteTasks}>Delete</button>
+        <button
+            onClick={deleteTasks}
+            className="delBtn"
+        >
+            Delete
+        </button>
     )
 }
 
