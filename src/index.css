@@ -10,6 +10,7 @@
 html {
     font: 62.5% / 1.15 sans-serif;
     background: #200B0D;
+    color: white;
 }
 
 
@@ -28,6 +29,15 @@ html {
 
 .toDoTask{
     background-color: #602025;
+    list-style-type: none;
+    margin: 1px;
 }
+
+.toDoTitle {
+    background-color: #602025;
+    text-shadow: 4px 4px black;
+    font-size: 30px;
+}
+
 
 

@@ -17,6 +17,7 @@ const ToDoList = ({ task, toggleTaskCompleted }) => {
     const viewTemplate = (
         <div>
             <input
+                className="cBox"
                 id={task.id}
                 type="checkbox"
                 defaultChecked={task.completed}

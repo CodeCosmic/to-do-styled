@@ -28,6 +28,7 @@ const ToDoComp = () => {
 
     const deleteTasks = () => {
         const remainingTasks = tasks.filter((task) => task.completed === false)
+        console.log(tasks)
         setTasks(remainingTasks)
     }
 
