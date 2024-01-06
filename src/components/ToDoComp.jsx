@@ -28,14 +28,24 @@ const ToDoComp = () => {
 
     const deleteTasks = () => {
         const remainingTasks = tasks.filter((task) => task.completed === false)
-        console.log(tasks)
         setTasks(remainingTasks)
+    }
+
+    const updateImportance = (id, newImportance) => {
+        const upImportance = tasks.map((task) => {
+            if (task.id === id) {
+                return { ...task, importance: newImportance }
+            }
+            return task
+        })
+        setTasks(upImportance)
     }
 
     const taskList = tasks
         .sort((a, b) => b.importance - a.importance)
         .map((task) => {
             return <ToDoList
+                updateImportance={updateImportance}
                 task={task}
                 toggleTaskCompleted={toggleTaskCompleted}
                 key={task.id}

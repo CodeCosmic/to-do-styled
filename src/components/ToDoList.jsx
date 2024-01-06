@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 
-const ToDoList = ({ task, toggleTaskCompleted }) => {
+const ToDoList = ({ task, toggleTaskCompleted, updateImportance }) => {
 
     const [isEditing, setIsEditing] = useState(false)
     const [importance, setImportance] = useState(task.importance)
@@ -8,6 +8,7 @@ const ToDoList = ({ task, toggleTaskCompleted }) => {
 
     const handleImportance = (e) => {
         setImportance(e.target.value)
+        task.importance = importance
     }
 
     const handleNameChange = (e) => {
@@ -25,7 +26,7 @@ const ToDoList = ({ task, toggleTaskCompleted }) => {
             />
             <label>{`${importance} - ${name}`}</label>
             <button
-                onClick={() => { setIsEditing(true); console.log(`${isEditing} from ${task.name}`) }}
+                onClick={() => { setIsEditing(true) }}
                 className="editBtn"
             >
                 Edit
@@ -45,22 +46,25 @@ const ToDoList = ({ task, toggleTaskCompleted }) => {
                     className="addTask"
                 />
                 <select
-                    onClick={handleImportance}
                     className="impSelect"
+                    onChange={handleImportance}
                 >
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                    <option>6</option>
-                    <option>7</option>
-                    <option>8</option>
-                    <option>9</option>
-                    <option>10</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
                 </select>
                 <button
-                    onClick={() => setIsEditing(false)}
+                    onClick={() => { 
+                        setIsEditing(false)
+                        updateImportance(task.id, importance)
+                    }}
                     type="submit"
                     className="doneBtn"
                 >

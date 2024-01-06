@@ -8,36 +8,88 @@
 */
 
 html {
-    font: 62.5% / 1.15 sans-serif;
-    background: #200B0D;
-    color: white;
+    font: bold 65% / 1.15 sans-serif;
+    background: black;
+    color: #AF3741;
 }
 
 
 .ToDoComp {
-    background: #A1333C;
+    background: rgba(161, 51, 60, 20%);
+    border: 1px solid #A1333C;
     text-align: center;
     width: 50%;
     margin: 0 auto;
 }
 
-.addTask, .impSelect, .addBtn, .delBtn, .doneBtn, .editBtn {
-    background-color: #802A30;
-    border: 1px solid #000;
-    margin: 1px;
+.addTask,
+.impSelect,
+.addBtn,
+.delBtn,
+.doneBtn {
+    background: rgba(161, 51, 60, 10%);
+    border: 1px solid #A1333C;
+    margin: 5px 0px 5px 15px;
+    color: #A1333C;
 }
 
-.toDoTask{
-    background-color: #602025;
+.addTask:hover,
+.impSelect:hover,
+.addBtn:hover,
+.delBtn:hover,
+.doneBtn:hover {
+    background: rgba(161, 51, 60, 100%);
+    border: 1px solid #A1333C;
+    margin: 5px 0px 5px 15px;
+    color: #200B0D;
+}
+
+.addTask:focus,
+.impSelect:focus,
+.addBtn:focus,
+.delBtn:focus,
+.doneBtn:focus {
+    background: rgba(161, 51, 60, 100%);
+    border: 1px solid #A1333C;
+    margin: 5px 0px 5px 15px;
+    color: #200B0D;
+}
+
+.editBtn {
+    background: rgba(161, 51, 60, 10%);
+    border: 1px solid #A1333C;
+    margin: 5px 0px 5px 15px;
+    color: #A1333C;
+}
+
+.editBtn:hover {
+    background: rgba(161, 51, 60, 100%);
+    border: 1px solid #A1333C;
+    margin: 5px 0px 5px 15px;
+    color: #200B0D;
+}
+
+.editBtn:focus {
+    background: rgba(161, 51, 60, 100%);
+    border: 1px solid #A1333C;
+    margin: 5px 0px 5px 15px;
+    color: #200B0D;
+}
+
+.toDoTask {
+    background: rgba(161, 51, 60, 15%);
+    border: 1px solid #A1333C;
+    text-align: center;
     list-style-type: none;
-    margin: 1px;
+    margin: 10px 0px 0px 0px;
 }
 
 .toDoTitle {
-    background-color: #602025;
-    text-shadow: 4px 4px black;
+    background: rgba(161, 51, 60, 15%);
+    border: 1px solid #A1333C;
+    color: #A1333C;
+    text-shadow: 2px 2px black;
     font-size: 30px;
 }
 
-
-
+.ToDoForm {}
