@@ -17,13 +17,15 @@ const ToDoList = ({ task, toggleTaskCompleted, updateImportance }) => {
 
     const viewTemplate = (
         <div>
-            <input
-                className="cBox"
-                id={task.id}
-                type="checkbox"
-                defaultChecked={task.completed}
-                onChange={() => toggleTaskCompleted(task.id)}
-            />
+            <label className="checkContainer">
+                <input
+                    id={task.id}
+                    type="checkbox"
+                    defaultChecked={task.completed}
+                    onChange={() => toggleTaskCompleted(task.id)}
+                />
+                <span className="checkmark"></span>
+            </label>
             <label>{`${importance} - ${name}`}</label>
             <button
                 onClick={() => { setIsEditing(true) }}
@@ -61,7 +63,7 @@ const ToDoList = ({ task, toggleTaskCompleted, updateImportance }) => {
                     <option value="10">10</option>
                 </select>
                 <button
-                    onClick={() => { 
+                    onClick={() => {
                         setIsEditing(false)
                         updateImportance(task.id, importance)
                     }}
