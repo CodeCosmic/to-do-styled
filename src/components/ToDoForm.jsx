@@ -24,6 +24,7 @@ const ToDoForm = ({ addTask }) => {
         <div className="ToDoForm">
             <form onSubmit={handleSubmit}>
                 <h2 className="toDoTitle">To-Do List</h2>
+                <p>Select an importance level</p>
                 <input
                     className="addTask"
                     placeholder="Add a task"

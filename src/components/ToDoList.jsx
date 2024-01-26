@@ -16,7 +16,7 @@ const ToDoList = ({ task, toggleTaskCompleted, updateImportance }) => {
     }
 
     const viewTemplate = (
-        <div>
+        <div className="taskListContainer">
             <label className="checkContainer">
                 <input
                     id={task.id}
@@ -26,7 +26,7 @@ const ToDoList = ({ task, toggleTaskCompleted, updateImportance }) => {
                 />
                 <span className="checkmark"></span>
             </label>
-            <label>{`${importance} - ${name}`}</label>
+            <label className="taskName">{`|${importance}| ${name}`}</label>
             <button
                 onClick={() => { setIsEditing(true) }}
                 className="editBtn"
